@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('./mario-bg.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            
+        }
+
+        img {
+            position: absolute;
+            bottom: 8%;
+            animation: run 1.5s linear infinite;
+        }
+
+        @keyframes run {
+            0% {
+                translate: 0%;
+            }
+
+            100% {
+                translate: 100vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src='./mario-run.gif'></img>
+</body>
+
+</html>
