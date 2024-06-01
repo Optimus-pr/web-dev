@@ -1,0 +1,113 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newton craddle</title>
+
+    <style>
+        *head {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        div {
+            background-color:rgb(118, 12, 118);
+            width: 1rem;
+            height: 16rem;
+            position: relative;
+        }
+
+        body{
+            height: 100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            border-top: 3rem solid rgb(118, 12, 118);
+            width:17rem;
+            aspect-ratio: 1;
+            background-color: white;
+            display: flex;
+            gap:4.5rem;
+        }
+
+        :is(.one,.two,.three,.four):after{
+            content:"";
+            position:absolute;
+            bottom:-5rem;
+            left:-2rem;
+            width:5.5rem;
+            aspect-ratio: 1;
+            background-color: black;
+            border-radius: 50%;
+        }
+
+        .one{
+            transform-origin:top left;
+            animation:move 2s linear infinite;
+           
+        }
+
+        .four{
+            transform-origin:top right;
+            animation: movee 2s linear 1s infinite;
+
+        }
+
+
+        @keyframes move {
+            0%{
+                rotate: 0deg;
+            }
+            25%{
+                rotate:25deg;
+            }
+            50%{
+                rotate:0deg;
+            }
+            100%{
+                rotate:0deg;
+            }
+
+        }
+
+        @keyframes movee {
+            0%{
+                rotate: 0deg;
+            }
+            25%{
+                rotate:-25deg;
+            }
+            50%{
+                rotate:0deg;
+            }
+            100%{
+                rotate:0deg;
+            }
+
+        }
+
+
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+    </div>
+
+</body>
+</html>
