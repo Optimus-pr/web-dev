@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carousel</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+
+    html{
+        font-size: 62.5%;
+    }
+
+    body{
+        display: grid;
+        place-items: center;
+        height: 100vh;
+    }
+
+    .container{
+        width:60vw;
+        aspect-ratio: 1;
+        background-image: url('./dev.png');
+        background-repeat: no-repeat;
+        background-size:100% 100%;
+        animation: gallery 3s linear infinite;
+        
+    }
+
+    @keyframes gallery {
+        0%{
+            background-image: url('./headphone.png');
+        }
+        25%{
+            background-image: url('./rain.png');
+        }
+        50%{
+            background-image: url('./research.png');
+        }
+        100%{
+            background-image: url('./dev.png');
+        }
+    }
+
+</style>
+<body>
+    <div class="container"></div>
+</body>
+</html>
